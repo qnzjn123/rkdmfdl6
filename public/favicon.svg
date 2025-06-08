@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cloudIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 클라우드 모양 -->
+  <path d="M8 18c-3 0-5.5 2.5-5.5 5.5S5 29 8 29h16c3.5 0 6.5-3 6.5-6.5S27.5 16 24 16c-0.8-3-3.5-5.25-6.75-5.25-1 0-1.95 0.225-2.8 0.625C13.6 9.6 12 8 10.1 8c-1.5 0-2.75 0.75-3.45 1.875C3.35 10.375 1 13.125 1 16.5c0 2.5 1.5 4.625 3.75 5.5z" fill="url(#cloudIcon)"/>
+  
+  <!-- 중앙 점 -->
+  <circle cx="16" cy="20" r="2" fill="#ffffff" opacity="0.8"/>
+</svg> 

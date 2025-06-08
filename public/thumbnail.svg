@@ -1,0 +1,53 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 그라디언트 -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 배경 -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- 클라우드 아이콘 -->
+  <path d="M400 280c-60 0-110 50-110 110 0 10 1.5 19.5 4 28.5-45 5-80 43-80 90 0 50 40 90 90 90h300c70 0 130-60 130-130 0-65-50-118-115-128-15-60-70-105-135-105-20 0-39 4.5-56 12.5-8-35-40-62-78-62z" fill="url(#cloud)" opacity="0.9"/>
+  
+  <!-- 작은 클라우드들 -->
+  <ellipse cx="200" cy="200" rx="40" ry="25" fill="#ffffff" opacity="0.7"/>
+  <ellipse cx="950" cy="180" rx="35" ry="20" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="1050" cy="450" rx="30" ry="18" fill="#ffffff" opacity="0.5"/>
+  
+  <!-- 제목 텍스트 -->
+  <text x="600" y="250" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#ffffff">
+    임가을 개인 클라우드 저장소
+  </text>
+  
+  <!-- 부제목 -->
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#ffffff" opacity="0.9">
+    안전하고 편리한 파일 저장 및 공유 서비스
+  </text>
+  
+  <!-- 아이콘들 -->
+  <!-- 파일 아이콘 -->
+  <rect x="480" y="380" width="40" height="50" rx="5" fill="#ffffff" opacity="0.8"/>
+  <rect x="485" y="385" width="30" height="2" fill="#667eea"/>
+  <rect x="485" y="395" width="25" height="2" fill="#667eea"/>
+  <rect x="485" y="405" width="20" height="2" fill="#667eea"/>
+  
+  <!-- 업로드 화살표 -->
+  <path d="M600 380 L600 430 M580 400 L600 380 L620 400" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- 다운로드 화살표 -->
+  <path d="M680 380 L680 430 M660 410 L680 430 L700 410" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.8"/>
+  
+  <!-- 하단 URL 표시 영역 -->
+  <rect x="300" y="520" width="600" height="60" rx="30" fill="#ffffff" opacity="0.2"/>
+  <text x="600" y="560" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#ffffff" opacity="0.9">
+    여기에 배포된 URL이 표시됩니다
+  </text>
+</svg> 
