@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>썸네일 생성기</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        canvas { border: 1px solid #ccc; margin: 20px 0; }
+        button { background: #667eea; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>SNS 썸네일 생성기</h1>
+    <canvas id="thumbnail" width="1200" height="630"></canvas>
+    <br>
+    <button onclick="generateThumbnail()">썸네일 생성</button>
+    <button onclick="downloadImage()">PNG 다운로드</button>
+    
+    <script>
+        const canvas = document.getElementById('thumbnail');
+        const ctx = canvas.getContext('2d');
+        
+        function generateThumbnail() {
+            // 배경 그라디언트
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // 클라우드 모양 그리기
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.beginPath();
+            ctx.arc(400, 300, 60, 0, Math.PI * 2);
+            ctx.arc(480, 280, 80, 0, Math.PI * 2);
+            ctx.arc(560, 300, 60, 0, Math.PI * 2);
+            ctx.rect(340, 300, 280, 60);
+            ctx.fill();
+            
+            // 작은 클라우드들
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.beginPath();
+            ctx.ellipse(200, 200, 40, 25, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.ellipse(950, 180, 35, 20, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.ellipse(1050, 450, 30, 18, 0, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // 제목 텍스트
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 48px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('임가을 개인 클라우드 저장소', 600, 250);
+            
+            // 부제목
+            ctx.font = '24px Arial, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.fillText('안전하고 편리한 파일 저장 및 공유 서비스', 600, 300);
+            
+            // 아이콘들
+            // 파일 아이콘
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.fillRect(480, 380, 40, 50);
+            ctx.fillStyle = '#667eea';
+            ctx.fillRect(485, 385, 30, 2);
+            ctx.fillRect(485, 395, 25, 2);
+            ctx.fillRect(485, 405, 20, 2);
+            
+            // 업로드 화살표
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(600, 380);
+            ctx.lineTo(600, 430);
+            ctx.moveTo(580, 400);
+            ctx.lineTo(600, 380);
+            ctx.lineTo(620, 400);
+            ctx.stroke();
+            
+            // 다운로드 화살표
+            ctx.beginPath();
+            ctx.moveTo(680, 380);
+            ctx.lineTo(680, 430);
+            ctx.moveTo(660, 410);
+            ctx.lineTo(680, 430);
+            ctx.lineTo(700, 410);
+            ctx.stroke();
+            
+            // 하단 URL 영역
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.fillRect(300, 520, 600, 60);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.font = '20px Arial, sans-serif';
+            ctx.fillText('안전한 개인 클라우드 저장소', 600, 560);
+        }
+        
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'thumbnail.png';
+            link.href = canvas.toDataURL('image/png', 1.0);
+            link.click();
+        }
+        
+        // 페이지 로드 시 자동 생성
+        generateThumbnail();
+    </script>
+</body>
+</html> 
